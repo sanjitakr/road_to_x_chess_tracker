@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 1rem;
+  background: #0f172a;
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.rating-card {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.rating-line {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.delta {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.delta.up { color: #22c55e; }
+.delta.down { color: #ef4444; }
+
+.bar {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.fill {
+  height: 100%;
+  width: 0%;
+  background: #3b82f6;
+}
+
+button, input, select {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-box {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 12px;
+}
+#workList div {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #1e293b;
+  font-size: 0.9rem;
+}

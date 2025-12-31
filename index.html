@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Road to X</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>The Road to X</h1>
+
+<section class="card">
+  <label>Lichess username</label>
+  <input id="user" placeholder="lichess username" />
+  <button id="refresh">Refresh ratings</button>
+</section>
+
+<section class="grid">
+  <div class="rating-card" data-mode="bullet">
+    <h3>Bullet</h3>
+    <div class="rating-line">
+      <span class="current">–</span>
+      <span class="delta"></span>
+      <span class="goal">/ –</span>
+    </div>
+    <div class="bar"><div class="fill"></div></div>
+    <button class="edit">Edit goal</button>
+  </div>
+
+  <div class="rating-card" data-mode="blitz">
+    <h3>Blitz</h3>
+    <div class="rating-line">
+      <span class="current">–</span>
+      <span class="delta"></span>
+      <span class="goal">/ –</span>
+    </div>
+    <div class="bar"><div class="fill"></div></div>
+    <button class="edit">Edit goal</button>
+  </div>
+
+  <div class="rating-card" data-mode="rapid">
+    <h3>Rapid</h3>
+    <div class="rating-line">
+      <span class="current">–</span>
+      <span class="delta"></span>
+      <span class="goal">/ –</span>
+    </div>
+    <div class="bar"><div class="fill"></div></div>
+    <button class="edit">Edit goal</button>
+  </div>
+
+  <div class="rating-card" data-mode="puzzle">
+    <h3>Puzzle</h3>
+    <div class="rating-line">
+      <span class="current">–</span>
+      <span class="delta"></span>
+      <span class="goal">/ –</span>
+    </div>
+    <div class="bar"><div class="fill"></div></div>
+    <button class="edit">Edit goal</button>
+  </div>
+</section>
+
+<section class="card">
+  <select id="chartMode">
+    <option value="bullet">Bullet</option>
+    <option value="blitz">Blitz</option>
+    <option value="rapid">Rapid</option>
+    <option value="puzzle">Puzzle</option>
+  </select>
+  <canvas id="chart"></canvas>
+</section>
+
+<section class="card">
+  <h2>Work log</h2>
+  <form id="workForm">
+    <input type="date" required />
+    <select required>
+      <option value="">Mode</option>
+      <option>Bullet</option>
+      <option>Blitz</option>
+      <option>Rapid</option>
+      <option>Puzzle</option>
+    </select>
+    <select required>
+      <option value="">Activity</option>
+      <option>Games</option>
+      <option>Puzzles</option>
+      <option>Analysis</option>
+      <option>Study</option>
+    </select>
+    <input type="number" min="5" placeholder="Minutes" required />
+    <input type="text" placeholder="Notes (optional)" />
+    <button>Add</button>
+  </form>
+
+  <div id="workList"></div>
+</section>
+
+<div id="goalModal" class="modal hidden">
+  <div class="modal-box">
+    <h3>Edit goal</h3>
+    <input id="goalInput" type="number" />
+    <button id="saveGoal">Save</button>
+    <button id="cancelGoal">Cancel</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
